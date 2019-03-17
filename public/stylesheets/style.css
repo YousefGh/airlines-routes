@@ -1,0 +1,25 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background: #2e2e2ef9;
+  text-align: center;
+  position: relative;
+}
+
+div {
+  margin: 0 auto;
+}
+
+h1,h2 {
+  color: white;
+  padding: 5px;
+}
+
+svg {
+  border: 1px solid #f2f2f222;
+  display: block;  box-sizing: border-box;
+
+}
+
+.mainView {
+  display: flex;
+}
