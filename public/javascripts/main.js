@@ -1,12 +1,19 @@
 let store = {}
+let mainView = document.getElementsByClassName('mainView')[0];
+let loaders = document.getElementsByClassName('loaders')[0];
+mainView.style.display = 'none';
+
+
 
 function loadData() {
     return Promise.all([
-        d3.csv("../routes/routes.csv"),
+        d3.csv("../routes.csv"),
         d3.json("../countries.geo.json"),
     ]).then(datasets => {
         store.routes = datasets[0];
         store.geoJSON = datasets[1]
+        loaders.style.display = 'none';
+        mainView.style.display = 'flex';
         return store;
     });
 }

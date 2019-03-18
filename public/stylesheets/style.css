@@ -3,6 +3,7 @@ body {
   background: #2e2e2ef9;
   text-align: center;
   position: relative;
+  color: #f2f2f2;
 }
 
 div {
@@ -22,4 +23,73 @@ svg {
 
 .mainView {
   display: flex;
+}
+
+
+.two {
+  position: relative;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  border-top: 5px solid orange;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid transparent;
+  animation: spin 3.0s linear infinite;
+}
+.two:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 64px;
+  height: 64px;
+  border-top: 5px solid orange;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 3.0s linear infinite;
+}
+.two:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 54px;
+  height: 54px;
+  border-top: 5px solid orange;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.loaders {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  /* top: 50%; */
+  left: 50%;
+  margin-top: 15%;
+  transform: translate(-50%, -50%);  
+  width: 100vw;
+  height: 100%;
+}
+
+p {
+  position: absolute;
+  bottom: 160%;
 }
